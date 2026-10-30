@@ -1,0 +1,15 @@
+# build output
+/bin/
+/dist/
+*.test
+*.exe
+
+# demo and test artefacts
+/out/
+coverage.out
+*.prof
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store

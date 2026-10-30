@@ -1,0 +1,17 @@
+[
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:8099/orders",
+    "headers": {
+      "Content-Type": "application/json",
+      "Idempotency-Key": "{{uuid}}"
+    },
+    "body": "{\"order\": {{seq}}, \"created_ms\": {{unix_ms}}}",
+    "weight": 1
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:8099/orders/{{seq}}",
+    "weight": 4
+  }
+]
